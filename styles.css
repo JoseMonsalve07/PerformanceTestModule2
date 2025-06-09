@@ -1,9 +1,11 @@
-*{
+/* Reset básico */
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* Tipografías */
 @font-face {
     font-family: 'bungee';
     src: url(fonts/BungeeTint-Regular.ttf);
@@ -14,48 +16,55 @@
     src: url(fonts/ProstoOne-Regular.ttf);
 }
 
-:root{
+/* Variables CSS para colores, bordes y espacios */
+:root {
     --color-one: #F0F0F0;
     --color-two: #E7473c;
     --color-three: #F0122D;
     --color-four: #000000;
     --border-radius: 1.25rem;
-    --gap: 1.5rem
+    --gap: 1.5rem;
 }
 
-html{
+/* Estilo base de la fuente */
+html {
     font-size: 16px;
     font-weight: 400;
 }
 
-body{
+body {
     background-color: var(--color-two);
-
 }
 
-h1, h2, h3{
+/* Grosor para títulos */
+h1, h2, h3 {
     font-weight: 300;
 }
 
-header{
-    display: flex;
-    box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.5);
-    align-items: center;
+/*  HEADER  */
+
+header {
+    display: flex; /* Coloca título y menú en fila */
     justify-content: space-between;
+    align-items: center;
     background-color: var(--color-four);
+    box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.5);
     border-radius: var(--border-radius);
-    position: sticky;
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 0; 
+    z-index: 99; /* Se queda encima del contenido */
     padding: 1.5rem;
     margin: var(--gap);
-    z-index: 99;
 }
 
-h1{
+h1 {
     font-family: bungee;
     font-weight: 500;
 }
 
-a{
+/* Enlaces de navegación */
+
+a {
     font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -64,28 +73,29 @@ a{
     transition: 0.5s ease;
 }
 
-a:hover{
-    color: var(--color-two);
+a:hover {
+    color: var(--color-two); 
 }
 
-ul{
+ul {
     display: flex;
     list-style: none;
 }
 
-header nav ul{
+header nav ul {
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
-.content{
+/*  SECCIÓN PRINCIPAL  */
+.content {
     display: flex;
     gap: var(--gap);
     margin: var(--gap);
 }
 
-.card{
+.card {
     padding: var(--gap);
     border-radius: var(--border-radius);
     background: var(--color-four);
@@ -94,17 +104,18 @@ header nav ul{
     box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-#presentation{
+/*  PRESENTACIÓN  */
+
+#presentation {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr); /* 12 columnas */
     gap: var(--gap);
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-
-.content #presentation h2{
+.content #presentation h2 {
     font-family: bungee;
     text-align: center;
     font-size: 3rem;
@@ -112,10 +123,8 @@ header nav ul{
     grid-row: 1;
 }
 
-.content #presentation img{
+.content #presentation img {
     width: 400px;
-    justify-content: center;
-    align-items: center;
     object-fit: cover;
     grid-row: 3/5;
     grid-column: 5/9;
@@ -125,69 +134,71 @@ header nav ul{
     transition: 1s ease;
 }
 
-.content #presentation img:hover{
+.content #presentation img:hover {
     transform: scale(1.1);
 }
 
-.content #presentation p{
+.content #presentation p {
     font-family: prosto;
     text-align: center;
     transition: 0.5s ease;
 }
 
-.pOne{
-    font-size: 1rem;
+.pOne {
     grid-row: 5;
     grid-column: 4/10;
-    text-align: center;
     font-size: 2rem;
 }
 
-.pTwo{
+.pTwo {
     grid-row: 6;
     grid-column: 3/11;
 }
 
-.pOne:hover, .pTwo:hover{
+.pOne:hover, .pTwo:hover {
     color: var(--color-two);
 }
 
-footer{
-  background: var(--color-four);
-  color: var(--color-three);
-  padding: var(--gap);
-  position: fixed;
-  width: 100%;
-  bottom: 0%;
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 5);
+/* FOOTER */
+
+footer {
+    background: var(--color-four);
+    color: var(--color-three);
+    padding: var(--gap);
+    position: fixed; /* Siempre al fondo de la pantalla */
+    width: 100%;
+    bottom: 0;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 5);
 }
 
-footer p{
-    transition: 0.5s ease;
-    font-family: prosto;
+footer p {
     text-align: center;
+    font-family: prosto;
+    transition: 0.5s ease;
 }
 
-footer p:hover{
+footer p:hover {
     color: var(--color-two);
 }
 
-.portfolio{
+/*  PORTAFOLIO  */
+
+.portfolio {
     display: flex;
     gap: var(--gap);
     margin: var(--gap);
 }
 
-#projects{
+#projects {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--gap);
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
-.portfolio #projects h2{
+.portfolio #projects h2 {
     font-family: bungee;
     text-align: center;
     font-size: 3rem;
@@ -195,70 +206,62 @@ footer p:hover{
     grid-column: 4/10;
 }
 
-.portfolio #projects h3, .portfolio #projects p{
+/* Cada proyecto ocupa distintas columnas */
+.project1, .project2, .project3 {
+    text-align: center;
     font-family: prosto;
-    transition: 0.5s ease;
 }
 
-.portfolio #projects .project1{
-    justify-content: center;
-    align-items: center;
+.project1 {
     grid-row: 2;
     grid-column: 3/7;
-    text-align: center;
 }
 
-.portfolio #projects .project2{
-    justify-content: center;
-    align-items: center;
+.project2 {
     grid-row: 2;
     grid-column: 7/11;
-    text-align: center;
 }
 
-.portfolio #projects .project3{
-    justify-content: center;
-    align-items: center;
+.project3 {
     grid-row: 4;
     grid-column: 5/9;
-    text-align: center;
 }
 
-.portfolio #projects .project1 img, .portfolio #projects .project2 img,
-.portfolio #projects .project3 img{
+.project1 img, .project2 img, .project3 img {
     width: 350px;
     object-fit: cover;
     border-radius: var(--border-radius);
     transition: 0.5s ease;
 }
 
-.portfolio #projects .project1 img:hover, .portfolio #projects .project2 img:hover,
-.portfolio #projects .project3 img:hover{
+.project1 img:hover, .project2 img:hover, .project3 img:hover {
     transform: scale(1.1);
 }
 
-.portfolio #projects .project1 h3:hover, .portfolio #projects .project1 p:hover,
-.portfolio #projects .project2 h3:hover, .portfolio #projects .project2 p:hover,
-.portfolio #projects .project3 h3:hover, .portfolio #projects .project3 p:hover{
+.project1 h3:hover, .project1 p:hover,
+.project2 h3:hover, .project2 p:hover,
+.project3 h3:hover, .project3 p:hover {
     color: var(--color-two);
 }
 
-.contact{
+/* CONTACTO */
+
+.contact {
     display: flex;
     gap: var(--gap);
     margin: var(--gap);
 }
 
-#contactme{
+#contactme {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--gap);
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
-.contact #contactme h2{
+.contact #contactme h2 {
     font-family: bungee;
     text-align: center;
     font-size: 3rem;
@@ -266,42 +269,106 @@ footer p:hover{
     grid-column: 4/10;
 }
 
-.contact #contactme label, .contact #contactme button{
-    font-family: prosto;
-    text-transform: uppercase;
-}
-
+/* Formulario */
 form {
-  display: grid;
-  gap: 1rem;
-  text-align: center;
-  grid-row: 2;
-  grid-column: 5/9;
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    grid-row: 2;
+    grid-column: 5/9;
+    font-family: prosto;
 }
 
 input, textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-  background: var(--color-two);
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.5s ease;
+    background: var(--color-two);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-family: prosto;
 }
 
 button:hover {
-  background: var(--color-three);
+    background: var(--color-three);
 }
 
-.socials{
+/* Redes sociales */
+.socials {
     text-align: center;
     grid-row: 4;
     grid-column: 5/9;
     transition: 1s ease;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    .card{
+        font-size: 1rem;
+        flex-direction: column;
+    }
+    form{
+        grid-column: 1/13;
+    }
+    .content #presentation img{
+        width: 350px;
+    }
+    .portfolio #projects .project1 img, 
+    .portfolio #projects .project2 img,
+    .portfolio #projects .project3 img{
+    width: 220px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: 0.5s ease;
+    }
+
+    .portfolio #projects .project1{
+        grid-row: 2;
+        grid-column: 1/13;
+    }
+
+    .portfolio #projects .project2{
+        grid-row: 3;
+        grid-column: 1/13;
+    }
+
+     .portfolio #projects .project3{
+        grid-row: 4;
+        grid-column: 1/13;
+    }
+
+    .pTwo{
+        grid-column: 5/9;
+    }
+    header h1{
+        text-align: center;
+    }
+    footer{
+        position: relative;
+    }
+    .portfolio #projects h2{
+        grid-column: 1/13;
+    }
+    .contact #contactme h2{
+        grid-column: 1/13;
+    }
+}
+
+@media screen and (max-width: 480px){
+    header h1{
+        text-align: center;
+    }
 }
