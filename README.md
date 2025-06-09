@@ -1,4 +1,4 @@
-Portafolio Personal - Jose Manuel Bustamante Monsalve
+<h1>Portafolio Personal - Jose Manuel Bustamante Monsalve</h1>
 
 Descripción
 Este es un sitio web personal creado en función de la prueba de desempeño del módulo 2 sobre HTML y CSS.
