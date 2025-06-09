@@ -44,7 +44,7 @@ h1, h2, h3 {
 /*  HEADER  */
 
 header {
-    display: flex; /* Coloca título y menú en fila */
+    display: flex; /* Pone título y menú en fila */
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-four);
