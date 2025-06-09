@@ -39,7 +39,7 @@ h1, h2, h3{
 
 header{
     display: flex;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-four);
@@ -61,6 +61,7 @@ a{
     text-transform: uppercase;
     color: var(--color-three);
     font-family: prosto;
+    transition: 0.5s ease;
 }
 
 a:hover{
@@ -90,6 +91,7 @@ header nav ul{
     background: var(--color-four);
     color: var(--color-three);
     position: relative;
+    box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 #presentation{
@@ -108,7 +110,6 @@ header nav ul{
     font-size: 3rem;
     grid-column: 4/10;
     grid-row: 1;
-
 }
 
 .content #presentation img{
@@ -121,6 +122,7 @@ header nav ul{
     border-radius: var(--border-radius);
     aspect-ratio: 1/1;
     justify-self: center;
+    transition: 1s ease;
 }
 
 .content #presentation img:hover{
@@ -130,6 +132,7 @@ header nav ul{
 .content #presentation p{
     font-family: prosto;
     text-align: center;
+    transition: 0.5s ease;
 }
 
 .pOne{
@@ -149,18 +152,21 @@ header nav ul{
     color: var(--color-two);
 }
 
-footer {
-  text-align: center;
+footer{
   background: var(--color-four);
   color: var(--color-three);
-  padding: 1rem;
+  padding: var(--gap);
   position: fixed;
   width: 100%;
-  font-family: prosto;
   bottom: 0%;
-  margin-left: 0;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 5);
 }
 
+footer p{
+    transition: 0.5s ease;
+    font-family: prosto;
+    text-align: center;
+}
 
 footer p:hover{
     color: var(--color-two);
@@ -191,6 +197,7 @@ footer p:hover{
 
 .portfolio #projects h3, .portfolio #projects p{
     font-family: prosto;
+    transition: 0.5s ease;
 }
 
 .portfolio #projects .project1{
@@ -222,6 +229,7 @@ footer p:hover{
     width: 350px;
     object-fit: cover;
     border-radius: var(--border-radius);
+    transition: 0.5s ease;
 }
 
 .portfolio #projects .project1 img:hover, .portfolio #projects .project2 img:hover,
@@ -233,4 +241,67 @@ footer p:hover{
 .portfolio #projects .project2 h3:hover, .portfolio #projects .project2 p:hover,
 .portfolio #projects .project3 h3:hover, .portfolio #projects .project3 p:hover{
     color: var(--color-two);
+}
+
+.contact{
+    display: flex;
+    gap: var(--gap);
+    margin: var(--gap);
+}
+
+#contactme{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact #contactme h2{
+    font-family: bungee;
+    text-align: center;
+    font-size: 3rem;
+    grid-row: 1;
+    grid-column: 4/10;
+}
+
+.contact #contactme label, .contact #contactme button{
+    font-family: prosto;
+    text-transform: uppercase;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+  grid-row: 2;
+  grid-column: 5/9;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: var(--color-two);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  background: var(--color-three);
+}
+
+.socials{
+    text-align: center;
+    grid-row: 4;
+    grid-column: 5/9;
+    transition: 1s ease;
 }
