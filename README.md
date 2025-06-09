@@ -1,13 +1,15 @@
 <h1>Portafolio Personal - Jose Manuel Bustamante Monsalve</h1>
 
 <h2>Descripción</h2>
-Este es un sitio web personal creado en función de la prueba de desempeño del módulo 2 sobre HTML y CSS.
-Muestra:
-- Una breve presentación personal, incluyendo una foto del coder.
-- Un portafolio de proyectos, donde se muestran imágenes de 3 proyectos con una breve descripción,
-a estas imágenes se puede acceder dando clic sobre ellas para verlas detalladamente.
-- Un formulario de contacto en el que se puede enviar un mensaje, además se agregan las redes sociales
-del coder.
+<p>Este es un sitio web personal creado en función de la prueba de desempeño del módulo 2 sobre HTML y CSS.
+Muestra:</p>
+<ul>
+  <li> Una breve presentación personal, incluyendo una foto del coder.</li>
+  <li>Un portafolio de proyectos, donde se muestran imágenes de 3 proyectos con una breve descripción,
+a estas imágenes se puede acceder dando clic sobre ellas para verlas detalladamente.</li>
+  <li>Un formulario de contacto en el que se puede enviar un mensaje, además se agregan las redes sociales
+del coder.</li>
+</ul>
 
 <h2>Instrucciones</h2>
 <ol>
