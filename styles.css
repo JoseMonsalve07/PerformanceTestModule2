@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'bungee';
+    src: url(fonts/BungeeTint-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'prosto';
+    src: url(fonts/ProstoOne-Regular.ttf);
+}
+
+:root{
+    --color-one: #F0F0F0;
+    --color-two: #E7473c;
+    --color-three: #F0122D;
+    --color-four: #000000;
+    --border-radius: 1.25rem;
+    --gap: 1.5rem
+}
+
+html{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body{
+    background-color: var(--color-two);
+
+}
+
+h1, h2, h3{
+    font-weight: 300;
+}
+
+header{
+    display: flex;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-four);
+    border-radius: var(--border-radius);
+    position: sticky;
+    padding: 1.5rem;
+    margin: var(--gap);
+    z-index: 99;
+}
+
+h1{
+    font-family: bungee;
+    font-weight: 500;
+}
+
+a{
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-three);
+    font-family: prosto;
+}
+
+a:hover{
+    color: var(--color-two);
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul{
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.content{
+    display: flex;
+    gap: var(--gap);
+    margin: var(--gap);
+}
+
+.card{
+    padding: var(--gap);
+    border-radius: var(--border-radius);
+    background: var(--color-four);
+    color: var(--color-three);
+    position: relative;
+}
+
+#presentation{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.content #presentation h2{
+    font-family: bungee;
+    text-align: center;
+    font-size: 3rem;
+    grid-column: 4/10;
+    grid-row: 1;
+
+}
+
+.content #presentation img{
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    grid-row: 3/5;
+    grid-column: 5/9;
+    border-radius: var(--border-radius);
+    aspect-ratio: 1/1;
+    justify-self: center;
+}
+
+.content #presentation img:hover{
+    transform: scale(1.1);
+}
+
+.content #presentation p{
+    font-family: prosto;
+    text-align: center;
+}
+
+.pOne{
+    font-size: 1rem;
+    grid-row: 5;
+    grid-column: 4/10;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.pTwo{
+    grid-row: 6;
+    grid-column: 3/11;
+}
+
+.pOne:hover, .pTwo:hover{
+    color: var(--color-two);
+}
+
+footer {
+  text-align: center;
+  background: var(--color-four);
+  color: var(--color-three);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  font-family: prosto;
+  bottom: 0%;
+  margin-left: 0;
+}
+
+
+footer p:hover{
+    color: var(--color-two);
+}
+
+.portfolio{
+    display: flex;
+    gap: var(--gap);
+    margin: var(--gap);
+}
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.portfolio #projects h2{
+    font-family: bungee;
+    text-align: center;
+    font-size: 3rem;
+    grid-row: 1;
+    grid-column: 4/10;
+}
+
+.portfolio #projects h3, .portfolio #projects p{
+    font-family: prosto;
+}
+
+.portfolio #projects .project1{
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    grid-column: 3/7;
+    text-align: center;
+}
+
+.portfolio #projects .project2{
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    grid-column: 7/11;
+    text-align: center;
+}
+
+.portfolio #projects .project3{
+    justify-content: center;
+    align-items: center;
+    grid-row: 4;
+    grid-column: 5/9;
+    text-align: center;
+}
+
+.portfolio #projects .project1 img, .portfolio #projects .project2 img,
+.portfolio #projects .project3 img{
+    width: 350px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.portfolio #projects .project1 img:hover, .portfolio #projects .project2 img:hover,
+.portfolio #projects .project3 img:hover{
+    transform: scale(1.1);
+}
+
+.portfolio #projects .project1 h3:hover, .portfolio #projects .project1 p:hover,
+.portfolio #projects .project2 h3:hover, .portfolio #projects .project2 p:hover,
+.portfolio #projects .project3 h3:hover, .portfolio #projects .project3 p:hover{
+    color: var(--color-two);
+}
