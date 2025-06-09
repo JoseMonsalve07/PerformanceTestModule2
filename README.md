@@ -9,17 +9,17 @@ a estas imágenes se puede acceder dando clic sobre ellas para verlas detalladam
 - Un formulario de contacto en el que se puede enviar un mensaje, además se agregan las redes sociales
 del coder.
 
-Instrucciones
+<h2>Instrucciones</h2>
 1. Clona el repositorio o descarga todos los archivos que hay en él.
 2. Abre index.html en tu navegador.
 3. Navega sobre las diferentes opciones mostradas en el encabezado (Presentation, Portfolio, Contact).
 
-Información del Coder:
+<h2>Información del Coder:</h2>
 - Nombre: Jose Manuel Bustamante Monsalve.
 - Clan: Hopper.
 - Correo: jm454227@gmail.com
 
-Recursos Usados:
+<h2>Recursos Usados:</h2>
 - HTML.
 - CSS.
 - Flexbox y Grid.
